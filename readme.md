@@ -50,4 +50,4 @@ php artisan db:seed
 
 enjoy it!
 
-给我个star吧!    --《鲁迅曾经说过》
+如觉不错,star一下吧!    --《鲁迅曾经说过》
