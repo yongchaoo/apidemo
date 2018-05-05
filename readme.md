@@ -48,4 +48,6 @@ php artisan db:seed
 [{"key":"Content-type","value":"application/json","enabled":true}]
 ```
 
-enjoy !
+enjoy it!
+
+给我个star吧!    --《鲁迅曾经说过》
