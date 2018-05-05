@@ -58,13 +58,16 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
-        $user = User::where('email',$request->input('email'))->update(['api_token' => null]);
+//        $user = User::where('email',$request->input('email'))->update(['api_token' => null]);
+        $islogin = Auth::guard('api')->user(); // 用户是否登录
 
-//        $user = Auth::guard('api')->user();
-//        if ($user) {
-//            $user->api_token = null;
-//            $user->save();
-//        }
+        return response()->json(['data' => $islogin], 200);
+
+        $user = Auth::guard('api')->user();
+        if ($user) {
+            $user->api_token = null;
+            $user->save();
+        }
 
         return response()->json(['data' => 'User logged out.'], 200);
     }
